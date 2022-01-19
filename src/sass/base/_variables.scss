@@ -1,0 +1,20 @@
+// Mixins
+@function rem($value) {
+  $remValue: ($value / 16) + rem;
+  @return $remValue;
+}
+
+// Widths
+$s: 600px;
+$m: 768px;
+$l: 992px;
+
+// Colors
+$gray: #333333;
+$white: #ffffff;
+$primary: #8210c9;
+$primary-alt: #4e2767;
+$color-text: $gray;
+
+// Fonts
+$font-bold: 600;

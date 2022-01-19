@@ -1,0 +1,61 @@
+// Breeds container
+.breeds {
+  list-style-type: none;
+  display: grid;
+  grid-gap: rem(20);
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+
+  @media screen and (max-width: $l) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  @media screen and (max-width: $s) {
+    grid-template-columns: 100%;
+  }
+}
+
+// Breed item
+.breed {
+  box-shadow: 0 4px 8px 0 rgba($gray, 0.15);
+  padding: rem(20) rem(40);
+
+  &__name {
+    margin: 0;
+    font-size: rem(20);
+  }
+
+  &__specs {
+    margin-top: rem(10);
+    display: table;
+
+    &-item {
+      display: table-row;
+
+      >* {
+        display: table-cell;
+        padding-top: rem(5);
+        padding-bottom: rem(5);
+        font-weight: $font-bold;
+      }
+    }
+
+    &-title {
+      padding-right: rem(20);
+      color: $primary;
+    }
+
+    a {
+      color: $color-text;
+
+      &:hover,
+      &:focus {
+        color: $primary;
+      }
+    }
+  }
+
+  // &__fci {
+  //   color: $primary;
+  //   font-weight: $font-bold;
+  // }
+}
